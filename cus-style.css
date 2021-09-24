@@ -18,7 +18,7 @@ body, * {
     box-shadow:  0 0 10px gray;
     
 }
-.cus-button-01 > span {
+.cus-button-01 span {
     position: absolute;
     top: 0;
     left: 0;
@@ -30,4 +30,21 @@ body, * {
     text-transform: uppercase;
     letter-spacing: 3px;
     font-size: 18px;
+    background: black;
+    color: white;
+}
+.cus-button-01 span:nth-child(2){
+    background: white;
+    color: black;
+    overflow: hidden;
+    z-index: 2;
+    transition: 0.5s;
+    clip-path: polygon(59% 0, 100% 0%, 100% 100%, 60% 100%, 44% 53%);
+}
+.cus-button-01 span:nth-child(2):hover {
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%, 0 50%);
+}
+.cus-button-01 span:nth-child(1):hover ~ span:nth-child(2){
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%, 100% 50%);
+
 }
