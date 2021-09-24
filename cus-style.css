@@ -10,7 +10,7 @@ body, * {
     text-align: center;
     padding: 20px;
 }
-.cus-button-01 {
+.cb-01 {
     position: relative;
     display: inline-block;
     width: 150px;
@@ -18,7 +18,7 @@ body, * {
     box-shadow:  0 0 10px gray;
     
 }
-.cus-button-01 span {
+.cb-01 span {
     position: absolute;
     top: 0;
     left: 0;
@@ -33,7 +33,7 @@ body, * {
     background: black;
     color: white;
 }
-.cus-button-01 span:nth-child(2){
+.cb-01 span:nth-child(2){
     background: white;
     color: black;
     overflow: hidden;
@@ -41,10 +41,44 @@ body, * {
     transition: 0.5s;
     clip-path: polygon(59% 0, 100% 0%, 100% 100%, 60% 100%, 44% 53%);
 }
-.cus-button-01 span:nth-child(2):hover {
+.cb-01 span:nth-child(2):hover {
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%, 0 50%);
 }
-.cus-button-01 span:nth-child(1):hover ~ span:nth-child(2){
+.cb-01 span:nth-child(1):hover ~ span:nth-child(2){
     clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%, 100% 50%);
 
+}
+
+
+.cb-02 {
+    position: relative;
+    display: inline-block;
+    width: 160px;
+    height: 50px;
+    box-shadow: 0 0 10px purple;
+}
+.cb-02 span{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    background-color: teal;
+    color: white;
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 3px;
+    transition: 0.5s;
+}
+.cb-02 span:nth-child(2) {
+    color: teal;
+    background-color: white;
+    clip-path: circle(33% at 50% 50%);
+}
+.cb-02 span:nth-child(2):hover {
+    clip-path: circle(71.0% at 50% 50%);
+}
+.cb-02 span:nth-child(1):hover ~ span:nth-child(2) {
+    clip-path: circle(0% at 50% 50%);
 }
